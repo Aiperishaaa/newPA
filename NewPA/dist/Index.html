@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/style.e308ff8e.css">
+  <style>@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+  body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+nav {
+    background: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+ul {
+    align-self: flex-start;
+    background: blue;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+li {
+    align-items: center;
+    color:cornflowerblue;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5em;
+    height: 2em;
+    justify-content: center;
+    list-style-type: none;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+li hover: {
+    border-color:#585555;
+    color: green;
+}
+#app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 850px;
+}
+@media (max-width: 1024px) {
+    #app {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+/*
+.fade-enter-active,
+.fade-leave-active{
+    transition: opasity .3s easy;
+}
+.fade-enter,
+.fade-leave-to;
+.menu, .clear{
+  cursor: pointer;
+  font-size: 3em;
+  padding-left; 5%;
+  transition: all .3s ease;
+  width: 1.5em;
+  color: #fff;
+}
+*/</style>
+<script src="/style.e308ff8e.js"></script><link rel="stylesheet" href="/script.75da7f30.css"></head>
+<body>
+  
+ <div id="app">
+  <nav>
+    <transition name="fade" mode="out-in">
+      <i class="materials-icon menu" v-if="!show" @click="show = !show" key="menu">Меню</i>
+      <i class="materials-icon clear" v-else="" @click="show = !show" key="clear">clear</i>
+    </transition>
+    <transition name="fade">
+      <ul v-if="show">
+        <li v-for="item in items">{{item}}</li>
+      </ul>
+    </transition>
+  </nav>
+
+   {{message}}
+   <appheader>
+
+   </appheader>
+   <maincontent>
+    <div class="row">
+      <component-m title="Card 1" message="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy" icon="far fa-address-card fa-2x">
+      </component-m>
+      
+      <component-m title="Card 2" message="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy" icon="far fa-bell fa-2x">
+      </component-m>
+      
+      <component-m title="Card 3" message="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy" icon="far fa-calendar-alt fa-2x">
+      </component-m>
+    </div>
+   </maincontent>
+   <mainfooter></mainfooter>
+ </div>
+    
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="/script.75da7f30.js"></script>
+</body>
+</html>
